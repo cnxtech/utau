@@ -1,9 +1,13 @@
 /* jshint node:true */
 'use strict';
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+var gulp = require('gulp'),
+  $ = require('gulp-load-plugins')(),
+  browserSync = require('browser-sync'),
+  autoprefixer = require('autoprefixer-core'),
+  mqpacker = require('css-mqpacker'),
+  csswring = require('csswring'),
+  reload = browserSync.reload;
+
 var asset = function (file) {
   return 'src/assets/' + file;
 }
@@ -11,12 +15,19 @@ var asset = function (file) {
 gulp.task('sass', function () {
   return gulp.src(asset('styles/main.scss'))
     .pipe($.plumber())
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      style: 'nested',
+      precision: 10,
+      includePaths: ['.'],
+      onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
-    .pipe(gulp.dest(asset('styles')))
+    .pipe($.postcss([
+      autoprefixer({browsers: ['last 1 version']}),
+      mqpacker,
+      csswring
+    ]))
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/assets/styles'));
 });
 
@@ -53,7 +64,7 @@ gulp.task('useref', function () {
   return gulp.src('src/default.hbs')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.csso()))
+    .pipe($.if('*.css', $.postcss([csswring])))
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe(gulp.dest('dist'));

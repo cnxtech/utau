@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 80%;
+  transform-style: preserve-3d;
 
   .content {
     @extend %vertically-align;
@@ -9,7 +10,6 @@
 
   .header {
     color: $white;
-    font-size: 5em;
 
     @include mobile {
       font-size: 2.5em;
@@ -17,6 +17,10 @@
 
     @include tablet {
       font-size: 4em;
+    }
+
+    @include computer {
+      font-size: 5em;
     }
   }
 
