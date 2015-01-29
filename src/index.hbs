@@ -1,0 +1,55 @@
+{{!< default}}
+
+{{> "header"}}
+
+{{> "hero"}}
+
+<main class="ui doubling two column centered page grid">
+  <div class="ten wide tablet column">
+    <div id="posts" class="ui stackable grid">
+      {{> "loop"}}
+    </div>
+  </div>
+  <div class="computer only six wide column">
+    <aside id="sidebar" class="ui sticky">
+      <div class="ui searchable floating dropdown labeled icon button" tabindex="0">
+        <i class="filter icon"></i>
+        <span class="text">Filter Posts</span>
+        <div class="menu" tabindex="-1">
+          <div class="header">
+            Filter
+          </div>
+          <div class="item">
+            <div class="ui red empty circular label"></div>
+            Tag A
+          </div>
+          <div class="item">
+            <div class="ui blue empty circular label"></div>
+            Tag B
+          </div>
+          <div class="item">
+            <div class="ui black empty circular label"></div>
+            Tag C
+          </div>
+          <div class="item">
+            <div class="ui green empty circular label"></div>
+            Tag D
+          </div>
+        </div>
+      </div>
+      <div class="ui info message">
+        <div class="header">
+          Have you heard about our mailing list?
+        </div>
+        <p>
+          Get the best news in your e-mail every day.
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  {{pagination}}
+</main>
+
+{{> "footer"}}
+

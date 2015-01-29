@@ -1,0 +1,67 @@
+{{!< default}}
+
+{{#post}}
+  {{#if image}}
+    <section class="fullscreen image">
+      <div class="background" style="background-image: url('{{image}}')"></div>
+
+      <header class="content">
+        <div class="ui centered skinny page grid">
+          <div class="column">
+            <div class="header" itemprop="name headline">{{title}}</div>
+            <div class="subheader">
+              <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    </section>
+  {{/if}}
+
+  <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="ui centered skinny page grid">
+      <div class="column">
+        {{#author}}
+          <aside class="ui left skinny rail">
+            <div class="ui tiny circular image">
+              <img src="{{asset "images/blank.gif"}}" data-src="{{image}}">
+            </div>
+            <div class="content">
+              <a class="header" href="{{url}}">
+                {{name}}
+              </a>
+              <div class="subheader">{{location}}</div>
+              <p>{{bio}}</p>
+            </div>
+          </aside>
+        {{/author}}
+
+        {{#unless image}}
+          <header>
+            <h1>{{title}}</h1>
+          </header>
+        {{/unless}}
+
+
+        <main class="content">
+          <div class="ui horizontal header divider">
+            <span class="reading-time">
+              <i class="book icon"></i> about <span class="eta"></span> to read
+            </span>
+          </div>
+
+          {{content}}
+        </main>
+
+        <section itemprop="comment" class="post-comments">
+          <div id="disqus_thread"></div>
+        </section>
+      </div>
+    </div>
+
+  </article>
+
+{{/post}}
+

@@ -1,0 +1,29 @@
+/*******************************
+     User Global Variables
+*******************************/
+@headerFont        : 'Open Sans', 'Helvetica Neue', 'Helvetica-Neue', helvetica, sans-serif;
+@pageFont          : 'Open Sans', 'Helvetica Neue', 'Helvetica-Neue', helvetica, sans-serif;
+
+@googleFontName    : 'Open+Sans';
+@googleFontSizes   : '300,400,700,300italic,400italic,700italic';
+
+/*-------------------
+        Page
+--------------------*/
+
+@lineHeight          : 1.7;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : #f23818;
+@linkHoverColor      : #f23818;
+
+/*-------------------
+        Paths
+--------------------*/
+
+@imagePath : '/assets/images';
+@fontPath  : '/assets/fonts';
+

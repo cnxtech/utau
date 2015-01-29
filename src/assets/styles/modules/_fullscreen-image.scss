@@ -1,0 +1,42 @@
+.fullscreen.image {
+  position: relative;
+  width: 100%;
+  height: 80%;
+
+  .content {
+    @extend %vertically-align;
+  }
+
+  .header {
+    color: $white;
+    font-size: 5em;
+
+    @include mobile {
+      font-size: 2.5em;
+    }
+
+    @include tablet {
+      font-size: 4em;
+    }
+  }
+
+  .subheader {
+    font-size: 2em;
+    font-style: italic;
+    color: $lighter-grey;
+  }
+
+  .background {
+    @extend %fill-container;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:before {
+      @extend %fill-container;
+      content: '';
+      background: $dimmer;
+    }
+  }
+}
+

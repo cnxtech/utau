@@ -1,0 +1,16 @@
+.ui.skinny.page.grid {
+  @include page-gutter(33%);
+
+  @include mobile {
+    @include page-gutter(8%);
+  }
+
+  @include tablet {
+    @include page-gutter(15%);
+  }
+
+  @include computer {
+    @include page-gutter(25%);
+  }
+}
+

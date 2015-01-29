@@ -1,0 +1,31 @@
+header.main {
+  position: fixed;
+  height: 70px;
+  left: 0em;
+  right: 0em;
+  z-index: 2000;
+  transition: background 0.2s ease-in-out;
+}
+
+header.main.not-at-top {
+  background-color: #30373b;
+}
+
+header.main nav .primary.links {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header.main nav .primary.links li {
+  display: inline-block;
+  line-height: 69px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header.main nav .primary.links a {
+  color: rgba(255, 255, 255, 0.9);
+}
+

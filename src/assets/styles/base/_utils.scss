@@ -1,0 +1,54 @@
+// Mixins
+@mixin page-gutter($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+// Placeholders
+%fill-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%vertically-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+// Responsive
+@mixin mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin computer {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large-monitor {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+

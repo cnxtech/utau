@@ -1,0 +1,71 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/opt/nvm/v0.10.35/bin/node',
+1 verbose cli   '/usr/local/opt/nvm/v0.10.35/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'browser-sync' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/opt/nvm/v0.10.35/bin/node
+5 verbose cache add [ 'browser-sync', null ]
+6 verbose cache add name=undefined spec="browser-sync" args=["browser-sync",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'browser-sync',
+7 verbose parsed url   path: 'browser-sync',
+7 verbose parsed url   href: 'browser-sync' }
+8 silly lockFile 6d7be3df-browser-sync browser-sync
+9 verbose lock browser-sync /Users/edgar/.npm/6d7be3df-browser-sync.lock
+10 silly lockFile 6d7be3df-browser-sync browser-sync
+11 silly lockFile 6d7be3df-browser-sync browser-sync
+12 verbose addNamed [ 'browser-sync', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 6373e9ab-browser-sync browser-sync@
+15 verbose lock browser-sync@ /Users/edgar/.npm/6373e9ab-browser-sync.lock
+16 silly addNameRange { name: 'browser-sync', range: '*', hasData: false }
+17 verbose request where is /browser-sync
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 6805cef237737a2d
+20 verbose url raw /browser-sync
+21 verbose url resolving [ 'https://registry.npmjs.org/', './browser-sync' ]
+22 verbose url resolved https://registry.npmjs.org/browser-sync
+23 verbose request where is https://registry.npmjs.org/browser-sync
+24 info trying registry request attempt 1 at 19:06:28
+25 http GET https://registry.npmjs.org/browser-sync
+26 info retry will retry, error on last attempt: Error: Hostname/IP doesn't match certificate's altnames
+27 info trying registry request attempt 2 at 19:06:44
+28 http GET https://registry.npmjs.org/browser-sync
+29 info retry will retry, error on last attempt: Error: Hostname/IP doesn't match certificate's altnames
+30 info trying registry request attempt 3 at 19:07:48
+31 http GET https://registry.npmjs.org/browser-sync
+32 silly lockFile 6373e9ab-browser-sync browser-sync@
+33 silly lockFile 6373e9ab-browser-sync browser-sync@
+34 error Error: Hostname/IP doesn't match certificate's altnames
+34 error     at SecurePair.<anonymous> (tls.js:1390:23)
+34 error     at SecurePair.emit (events.js:92:17)
+34 error     at SecurePair.maybeInitFinished (tls.js:980:10)
+34 error     at CleartextStream.read [as _read] (tls.js:472:13)
+34 error     at CleartextStream.Readable.read (_stream_readable.js:341:10)
+34 error     at EncryptedStream.write [as _write] (tls.js:369:25)
+34 error     at doWrite (_stream_writable.js:226:10)
+34 error     at writeOrBuffer (_stream_writable.js:216:5)
+34 error     at EncryptedStream.Writable.write (_stream_writable.js:183:11)
+34 error     at write (_stream_readable.js:602:24)
+34 error     at flow (_stream_readable.js:611:7)
+34 error     at Socket.pipeOnReadable (_stream_readable.js:643:5)
+35 error If you need help, you may report this *entire* log,
+35 error including the npm and node versions, at:
+35 error     <http://github.com/npm/npm/issues>
+36 error System Darwin 14.0.0
+37 error command "/usr/local/opt/nvm/v0.10.35/bin/node" "/usr/local/opt/nvm/v0.10.35/bin/npm" "install" "-g" "browser-sync"
+38 error cwd /Users/edgar/codes/utau
+39 error node -v v0.10.35
+40 error npm -v 1.4.28
+41 verbose exit [ 1, true ]

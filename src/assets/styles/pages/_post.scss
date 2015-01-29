@@ -1,0 +1,26 @@
+.post {
+  .ui.grid {
+    margin-top: 3%;
+  }
+
+  .ui.left.skinny.rail {
+    margin-top: 32px;
+  }
+
+  main.content {
+    font-size: 1.4em;
+    font-weight: $light;
+    letter-spacing: 0.01rem;
+    word-break: break-word;
+    word-wrap: break-word;
+
+    .reading-time {
+      font-size: 1rem;
+      font-weight: $light;
+      font-style: italic;
+      color: $lighter-grey;
+    }
+  }
+
+}
+
