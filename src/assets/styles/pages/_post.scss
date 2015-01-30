@@ -3,8 +3,12 @@
     margin-top: 3%;
   }
 
-  .ui.left.skinny.rail {
+  .ui.skinny.rail {
     margin-top: 32px;
+  }
+
+  .ui.divider {
+    margin: 2rem 0;
   }
 
   main.content {
@@ -14,7 +18,7 @@
     word-break: break-word;
     word-wrap: break-word;
 
-    .reading-time {
+    .meta {
       font-size: 1rem;
       font-weight: $light;
       font-style: italic;

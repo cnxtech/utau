@@ -1,0 +1,13 @@
+footer {
+  color: $white;
+  background-color: $dark-grey;
+
+  a {
+    color: $white;
+
+    &:hover {
+      border: none;
+      color: $white;
+    }
+  }
+}

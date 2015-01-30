@@ -46,14 +46,24 @@
 
 
         <main class="content">
-          <div class="ui horizontal header divider">
-            <span class="reading-time">
-              <i class="book icon"></i> about <span class="eta"></span> to read
-            </span>
+          <div class="ui right skinny rail">
+            <div class="content">
+              <div class="meta">
+                <i class="wait icon"></i><span class="eta"></span> read
+              </div>
+              <div class="meta">
+                <i class="{{plural tags.length empty="" singular="tag" plural="tags"}} icon"></i>{{tags}}
+              </div>
+            </div>
           </div>
 
           {{content}}
         </main>
+
+          <h4 class="ui horizontal divider">
+            <i class="comments icon"></i>
+            Comments
+          </h4>
 
         <section itemprop="comment" class="post-comments">
           <div id="disqus_thread"></div>
@@ -64,4 +74,6 @@
   </article>
 
 {{/post}}
+
+{{> "footer"}}
 
