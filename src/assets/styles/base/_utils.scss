@@ -22,34 +22,3 @@
   padding-top: 0;
 }
 
-// Responsive
-@mixin mobile {
-  @media only screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media only screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin computer {
-  @media only screen and (min-width: 992px) {
-    @content;
-  }
-}
-
-@mixin large-monitor {
-  @media only screen and (min-width: 1400px) {
-    @content;
-  }
-}
-
-@mixin widescreen {
-  @media only screen and (min-width: 1920px) {
-    @content;
-  }
-}
-

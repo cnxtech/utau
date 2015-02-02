@@ -1,23 +1,42 @@
-.hero {
-  position: relative;
-  height: 320px;
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+.hero.fullscreen.image {
+  .header, .content, .links {
+    text-align: center;
+  }
+
+  .header {
+    color: $white;
+    line-height: 1.4;
+
+    @include mobile {
+      font-size: 2.5em;
+    }
+
+    @include tablet {
+      font-size: 3em;
+    }
+
+    @include computer {
+      font-size: 4em;
+    }
+  }
+
+  .background {
+    &:before {
+      background: $dark-blue-dimmer;
+    }
+  }
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 120%;
-  z-index: -1;
-  transform-origin: 0 100%;
-  transform: rotate(-4deg) translateZ(0);
-  background: linear-gradient(90deg, #a80003 0%, #a80003 100%);
-}
+// .hero::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 120%;
+//   z-index: -1;
+//   transform-origin: 0 100%;
+//   transform: rotate(-4deg) translateZ(0);
+//   background: linear-gradient(90deg, #161C6B 0%, #161C6B 100%);
+// }
 

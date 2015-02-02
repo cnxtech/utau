@@ -121,7 +121,7 @@ gulp.task('watch', function () {
 
   gulp.watch(['src/default.hbs', 'bower_components/semantic-ui/dist/semantic.css'], ['layout']);
   gulp.watch(['src/**/*.hbs', '!src/default.hbs'], ['hbs']);
-  gulp.watch(asset('scripts/*.js'), ['useref']);
+  gulp.watch(asset('scripts/*.js'), ['js']);
   gulp.watch(asset('styles/**/*.scss'), ['sass']);
   gulp.watch('bower.json', ['bower', 'fonts']);
 });
