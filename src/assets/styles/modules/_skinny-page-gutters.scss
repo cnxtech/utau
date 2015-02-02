@@ -2,7 +2,7 @@
   @include page-gutter(33%);
 
   @include mobile {
-    @include page-gutter(8%);
+    @include page-gutter(4em);
   }
 
   @include tablet {

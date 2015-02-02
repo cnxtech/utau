@@ -1,5 +1,11 @@
 .home-template {
   main.ui.grid {
-    margin: 2rem 0;
+    @include mobile {
+      margin: 1rem 0;
+    }
+
+    @include tablet {
+      margin: 2rem 0;
+    }
   }
 }

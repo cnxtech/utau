@@ -1,15 +1,3 @@
-li {
-  &.stackable.item {
-    @include mobile {
-      display: block;
-    }
-
-    @include tablet {
-      display: inline-block;
-    }
-  }
-}
-
 @mixin mobile {
   @media only screen and (max-width: 767px) {
     @content;
@@ -40,4 +28,14 @@ li {
   }
 }
 
+li {
+  &.stackable.item {
+    @include mobile {
+      display: block;
+    }
 
+    @include tablet {
+      display: inline-block;
+    }
+  }
+}
