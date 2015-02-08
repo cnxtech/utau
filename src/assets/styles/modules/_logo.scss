@@ -1,0 +1,22 @@
+svg.logo {
+  .bg {
+    fill: #a92801;
+  }
+
+  .fill {
+    fill: $white;
+  }
+
+  .stroke {
+    fill: none;
+    stroke: $white;
+    stroke-width: 18;
+    stroke-miterlimit: 10;
+
+    &.thin {
+      stroke-width: 16;
+      stroke-miterlimit: 10;
+    }
+  }
+}
+

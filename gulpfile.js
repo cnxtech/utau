@@ -34,14 +34,15 @@ gulp.task('sass', function () {
 gulp.task('js', ['jshint'], function() {
   return gulp.src(asset('scripts/**/*.js'))
     .pipe($.changed('dist/assets/scripts'))
-    .pipe($.uglify())
+    .pipe($.sourcemaps.init())
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/assets/scripts'));
 });
 
 gulp.task('jshint', function () {
   return gulp.src(asset('scripts/**/*.js'))
     .pipe($.changed('dist/assets/scripts'))
-    .pipe($.jshint())
+    .pipe($.jshint({debug: true}))
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.jshint.reporter('fail'));
 });
@@ -63,7 +64,6 @@ gulp.task('useref', function () {
 
   return gulp.src('src/default.hbs')
     .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.postcss([csswring])))
     .pipe(assets.restore())
     .pipe($.useref())

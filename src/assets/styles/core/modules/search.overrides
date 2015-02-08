@@ -1,3 +1,29 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.search>.results .result {
+  padding: .6em 1em;
+}
+
+.ui.search>.results .result em {
+  font-style: normal;
+  background: rgba(125, 168, 208, 0.3);
+  -webkit-border-radius: 1px;
+     -moz-border-radius: 1px;
+          border-radius: 1px;
+}
+
+.ui.search>.results .result .description {
+  margin-bottom: 0.1em;
+}
+
+.ui.search>.results .result .tag {
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 1em;
+  padding: 0.15em 0.4em;
+  margin-right: 0.2em;
+  font-size: .9285em;
+  color: rgba(0,0,0,.2);
+}
+

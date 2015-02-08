@@ -2,6 +2,10 @@
          Site Overrides
 *******************************/
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 blockquote {
   border-left: 3px solid #57a3e8;
   font-style: italic;

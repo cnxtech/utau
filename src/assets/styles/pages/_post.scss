@@ -1,4 +1,25 @@
+.post-template .fullscreen.image {
+  subheader {
+    font-size: 1.6em;
+    margin-bottom: -.5em;
+  }
+}
+
 .post {
+  p {
+    line-height: 1.7;
+  }
+
+  hr {
+    height: 1px;
+    color: #d8d8d8;
+    margin: 2em 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
   .ui.grid {
     margin-top: 3%;
   }
@@ -12,11 +33,14 @@
   }
 
   main.content {
-    font-size: 1.4em;
-    font-weight: $light;
-    letter-spacing: 0.01rem;
+    color: #4d4d4d;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 1.3em;
     word-break: break-word;
     word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
 
     .meta {
       font-size: 1rem;
@@ -24,6 +48,7 @@
       font-style: italic;
       color: $lighter-grey;
     }
+
   }
 
 }

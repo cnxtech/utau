@@ -10,6 +10,7 @@
 
   .header {
     color: $white;
+    line-height: 1.2;
 
     @include mobile {
       font-size: 2.5em;
@@ -40,6 +41,10 @@
       @extend %fill-container;
       content: '';
       background: $dimmer;
+    }
+
+    @include computer {
+      background-attachment: fixed;
     }
   }
 }

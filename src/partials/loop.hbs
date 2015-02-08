@@ -14,9 +14,7 @@
       <div class="content">
         <div class="header" itemprop="name">{{title}}</div>
         <div class="meta">
-          <time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished">
-            {{date published_at timeago="true"}}
-          </time>
+          <span class="author">by {{author}}</span><time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished">{{date published_at timeago="true"}}</time>
         </div>
         <div class="description" itemprop="description">
           <p>{{excerpt words="25"}} ...</p>
@@ -30,4 +28,4 @@
     </article>
   </div>
 {{/foreach}}
-1
+

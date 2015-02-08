@@ -10,10 +10,10 @@
       <header class="content">
         <div class="ui centered skinny page grid">
           <div class="column">
-            <div class="header" itemprop="name headline">{{title}}</div>
             <div class="subheader">
               <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
             </div>
+            <div class="header" itemprop="name headline">{{title}}</div>
           </div>
         </div>
       </header>
@@ -49,7 +49,7 @@
 
         <main class="content">
           <div class="ui right skinny rail">
-            <div class="content">
+            <div class="ui sticky content">
               <div class="meta">
                 <i class="wait icon"></i><span class="eta"></span> read
               </div>
@@ -61,11 +61,6 @@
 
           {{content}}
         </main>
-
-          <h4 class="ui horizontal divider">
-            <i class="comments icon"></i>
-            Comments
-          </h4>
 
         <section itemprop="comment" class="post-comments">
           <div id="disqus_thread"></div>

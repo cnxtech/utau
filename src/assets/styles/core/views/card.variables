@@ -1,3 +1,16 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Content */
+@contentFontSize: 1.1em;
+
+/* Header */
+@headerFontSize: 1.3em;
+
+/* Metadata */
+@metaFontSize: 1em;

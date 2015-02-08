@@ -1,0 +1,10 @@
+.ui.posts.grid {
+  .content .author a {
+    color: rgba(0,0,0,.4);
+
+    &:hover {
+      color: #f23818;
+    }
+  }
+}
+

@@ -1,0 +1,71 @@
+#footer {
+  color: $barely-white;
+  font-size: 1.1em;
+  padding: 2.5em 0;
+
+  a {
+    color: $barely-white;
+
+    &:hover {
+      color: rgba(255,255,255,.9);
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  p:nth-of-type(2) {
+    margin-top: 2.5em;
+    clear: both;
+  }
+
+  .utau.column .content {
+    font-size: 1.2em;
+
+    a {
+      color: $almost-white;
+      border-bottom: 1px solid $almost-white; 
+    }
+
+    .contact.us {
+      color: $almost-white;
+
+      a {
+        color: $almost-white;
+        border-bottom: 1px dotted $almost-white; 
+      }
+    }
+  }
+
+
+  .logo {
+    float: left;
+    width: 8em;
+    margin-right: 1.5em;
+
+    .bg {
+      fill: none;
+    }
+
+    .fill {
+      fill: $barely-white;
+    }
+
+    .stroke {
+      stroke: $barely-white;
+    }
+  }
+
+  .header {
+    color: rgba(255,255,255,.4);
+    font-size: 1.1em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+  }
+}
+
