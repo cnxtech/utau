@@ -1,0 +1,13 @@
+.page-template-help {
+  @include no-transparent-masthead;
+
+  .ui.help.page.grid {
+    padding-top: 80px;
+
+    h1 {
+      font-weight: normal;
+      font-size: 4rem;
+    }
+  }
+}
+

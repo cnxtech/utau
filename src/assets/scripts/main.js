@@ -16,6 +16,8 @@
         offset: 90,
         context: $posts
       });
+
+      $sidebar.sticky('refresh');
     }
 
     if ($post.length && $tableOfContents.length) {
@@ -41,11 +43,18 @@
       index = [];
       $blogSearch.find('input').focus(loadRSS);
     }
+
+    if ($helpForm.length) {
+      helpForm = new NaturalForm($helpForm.get(0));
+    }
   });
 
-  var $masthead = $('#masthead'),
+  var _ = window._,
+    moment = window.moment,
+    NaturalForm = window.NaturalForm,
+    $masthead = $('#masthead'),
     $mobileNav = $('#masthead .mobile.only.nav'),
-    $posts = $('.ui.posts.grid'),
+    $posts = $('main .ui.posts.grid'),
     $post = $('body.post-template'),
     $postContent = $('.post main.content'),
     $tableOfContents = $('.post main.content .ui.sticky'),
@@ -53,10 +62,10 @@
     $unveil = $('img[data-src]'),
     $disqus = $('#disqus_thread'),
     $blogSearch = $('.ui.blog.search'),
-    _ = window._,
-    moment = window.moment,
+    $helpForm = $('.page-template-help .natural.form'),
     disqusShortname = 'utau-blog',
     rssLoaded = false,
+    helpForm,
     index;
 
   function disqus() {

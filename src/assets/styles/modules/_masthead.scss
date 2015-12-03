@@ -1,3 +1,22 @@
+@mixin no-transparent-masthead {
+  #masthead {
+    background-color: $white;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    &:not(.open) {
+      a, i {
+        color: $dark-grey;
+      }
+
+      .logo {
+        .bg {
+          fill: #a92801;
+        }
+      }
+    }
+  }
+}
+
 #masthead {
   font-family: Open Sans,Helvetica Neue,Helvetica-Neue,helvetica,sans-serif;
   position: fixed;
@@ -52,22 +71,6 @@
 
     .bg {
       fill: none;
-    }
-
-    .fill {
-      fill: $white;
-    }
-
-    .stroke {
-      fill: none;
-      stroke: $white;
-      stroke-width: 18;
-      stroke-miterlimit: 10;
-
-      &.thin {
-        stroke-width: 16;
-        stroke-miterlimit: 10;
-      }
     }
   }
 

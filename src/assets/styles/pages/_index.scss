@@ -7,5 +7,9 @@
     @include tablet {
       margin: 2rem 0;
     }
+
+    .sidebar.column {
+      max-height: 1px;
+    }
   }
 }

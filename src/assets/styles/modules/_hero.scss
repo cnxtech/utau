@@ -62,7 +62,11 @@
 
   .ui.hero-buttons.grid {
     @include mobile {
-      @include page-gutter(10%);
+      @include page-gutter(10em);
+
+      .column {
+        padding: .6rem 1rem !important;
+      }
     }
   }
 
